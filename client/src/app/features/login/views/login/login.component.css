@@ -1,0 +1,37 @@
+.login-background{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../../../../../assets/login-back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-container{
+    text-align: center;
+}
+
+.main-title{
+    font-size: 4rem;
+    font-family: 'poppins';
+    font-weight: 600;
+    color: whitesmoke;
+    -webkit-text-stroke: 2px black;
+}
+
+.second-title{
+    font-size: 2rem;
+    font-family: 'poppins';
+    font-weight: 600;
+    color: whitesmoke;
+    -webkit-text-stroke: 2px black;
+}
+
+.forms-container{
+    width: 40rem;
+    height: 30rem;
+}
