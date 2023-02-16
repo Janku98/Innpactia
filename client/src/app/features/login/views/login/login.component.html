@@ -5,7 +5,7 @@
     </div>
 
     <div class="forms-container">
-        <app-login-box></app-login-box>
+        <app-login-box (emitForm)="submitForm($event)"></app-login-box>
     </div>
 
 </div>

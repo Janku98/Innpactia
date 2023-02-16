@@ -3,14 +3,12 @@
     <img alt="phoneicon" src="../../../../../assets/login-icon.png" class="login-icon"/> 
 
     <div class="form-line">
-        <p class="form-label">Username:</p>
         <input placeholder="username"
                 type="text"
                 formControlName="username"/>
     </div>
 
     <div class="form-line">
-        <p class="form-label">Password:</p>
         <input type="password" 
                 placeholder="password"
                 formControlName="password"/>
@@ -20,6 +18,12 @@
         <button [disabled]="form.invalid"
                 (click)="login()">
                 Log-In
+        </button>
+    </div>
+
+    <div class="form-line">
+        <button (click)="goToRegister()">
+                Register
         </button>
     </div>
 </div>

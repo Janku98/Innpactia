@@ -1,0 +1,35 @@
+<div class="client-background">
+
+    <div class="client-card" *ngIf="(client|async)?.state === 'loaded'">
+        
+
+        <div class="title-container">
+            <div class="exit-container">
+                <img alt="goback" 
+                    src="../../../../../assets/goback.png" 
+                    class="goback-icon"
+                    (click)="goback()"/>
+            </div>
+
+            <p>Client Name: {{$any(client|async)?.payload.clientName}}</p>
+
+            <div class="form-box" [formGroup]="form">
+                <p>Add cellphone</p>
+                <input placeholder="phone name" 
+                        formControlName="name"/>
+                <button [disabled]="form.invalid"
+                        (click)="add()">
+                    Add
+                </button>
+            </div>
+        </div>
+
+        <div class="repairs-container">
+            <div class="cellphone-card" *ngFor="let phone of $any(client|async)?.payload.phones">
+                <p>Cellphone Name: {{phone.cell_name}}</p>
+            </div>
+        </div>
+
+    </div>
+    
+</div>

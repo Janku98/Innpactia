@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { Router } from '@angular/router';
 import { FormLogin } from '../../symbol/login-inteface';
 
 
@@ -17,7 +18,8 @@ export class LoginBoxComponent {
 
   @Output() emitForm = new EventEmitter<FormLogin>();
 
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder,
+              private readonly router: Router) { }
 
   login(): void {
     if (this.form.valid) {
@@ -25,6 +27,10 @@ export class LoginBoxComponent {
         return;
     }
     this.form.markAllAsTouched()
+  }
+
+  goToRegister(): void {
+    this.router.navigate(['/register'])
   }
 
 }

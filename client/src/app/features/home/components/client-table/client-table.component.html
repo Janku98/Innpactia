@@ -1,0 +1,19 @@
+<table>
+    <tr class="table-header">
+        <th>Id client</th>
+        <th>Name</th>
+        <th>Phones</th>
+    </tr>
+
+    <tr *ngFor="let client of clients" class="client-row" (click)="inspectClient(client.clientId)">
+        <td>
+            {{client.clientId}}
+        </td>
+        <td>
+            {{client.name}}
+        </td>
+        <td>
+            proximamente
+        </td>
+    </tr>
+</table>

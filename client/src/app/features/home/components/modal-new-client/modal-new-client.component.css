@@ -1,0 +1,36 @@
+.modal-container{
+    width: 400px;
+    height: 200px;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'poppins';
+    align-items: center;
+    justify-content: center;
+}
+.title-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-container{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.input-container > input{
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: rgba(55, 61, 94, 0.342);
+    height: 27px;
+    color: azure;
+}
+
+.buttons-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

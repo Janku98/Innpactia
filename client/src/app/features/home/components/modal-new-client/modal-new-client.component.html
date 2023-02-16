@@ -1,0 +1,15 @@
+<div class="modal-container" [formGroup]="form">
+    <div class="title-container">
+        <p>Nuevo cliente</p>
+    </div>
+
+    <div class="input-container" >
+        <input type="text" placeholder="Nombre del cliente" formControlName="name"/>
+    </div>
+
+    <div class="buttons-container">
+        <button (click)="create()" [disabled]="form.invalid">Aceptar</button>
+        <button (click)="cancel()">Cancelar</button>
+    </div>
+    
+</div>

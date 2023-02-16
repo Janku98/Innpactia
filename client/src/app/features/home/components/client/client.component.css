@@ -1,0 +1,80 @@
+.client-background{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(55, 61, 94);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.client-card{
+    height: 500px;
+    width: 70%;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+}
+
+.title-container{
+    width: 33%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title-container > p{
+    color: azure;
+    font-family: 'poppins';
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+.repairs-container{
+    width: 66%;
+    padding: 15px;
+}
+
+.form-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.form-box > p{
+    font-family: 'poppins';
+}
+.form-box > input {
+    margin-bottom: 10px;
+}
+
+.cellphone-card{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 44, 90, 0.377);
+}
+
+
+.exit-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.goback-icon{
+    width: 30px;
+}

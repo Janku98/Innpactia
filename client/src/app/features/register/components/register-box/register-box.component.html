@@ -1,0 +1,29 @@
+<div class="login-box" [formGroup]="form">
+
+    <img alt="phoneicon" src="../../../../../assets/login-icon.png" class="login-icon"/> 
+
+    <div class="form-line">
+        <input placeholder="username"
+                type="text"
+                formControlName="username"/>
+    </div>
+
+    <div class="form-line">
+        <input type="password" 
+                placeholder="password"
+                formControlName="password"/>
+    </div>
+
+    <div class="form-line">
+        <button [disabled]="form.invalid"
+                (click)="register()">
+                Register
+        </button>
+    </div>
+
+    <div class="form-line">
+        <button (click)="goToLogIn()">
+                Go to LogIn
+        </button>
+    </div>
+</div>

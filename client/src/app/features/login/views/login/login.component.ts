@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { FormLogin } from '../../symbol/login-inteface';
+import { LoginPresenter } from './login.presenter';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [LoginPresenter]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
 
-  constructor() { }
+  constructor(private readonly presenter: LoginPresenter) { }
 
-  ngOnInit(): void {
+  submitForm(form: FormLogin): void {
+    this.presenter.sendLogin(form)
   }
 
 }

@@ -1,0 +1,26 @@
+<div class="home-background">
+    <div class="title-container">
+        <p>Welcome {{user}}, click in each row to get more info</p>
+    </div>
+
+    <div class="buttons-container">
+        <button (click)="openDialogNewClient()">
+            <img alt="add-icon" src="../../../../../assets/add-icon.png" 
+                 class="button-icon"/> 
+            Nuevo Cliente
+        </button>
+        <button (click)="logOut()">
+            <img alt="logout-icon" src="../../../../../assets/logout-icon.png" class="button-icon" />
+            Log Out
+        </button>
+    </div>
+
+    <div class="table-container" 
+        *ngIf="(clients|async)?.state === 'loaded'">
+
+        <app-client-table [clientsData]="(clients|async)?.payload">
+        </app-client-table>
+
+    </div>
+    
+</div>
