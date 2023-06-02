@@ -1,10 +1,10 @@
-# Innpactia
-technical test
+Proyecto Personal: BillBox in USD and Pesos
+
+
+
+
 
 Para poder instalar tanto front como back es necesario situarse sobre cada uno de las respectivas carpetas y realizar el comando "npm i" para instalar dependencias 
-
-Con respecto a la base de datos fue enviada en el mail para poder hacer pruebas ya que sin la misma no podra funcionar el sistema
-
 Caso API: para poder correr las enviroments correctamente completar el .env con lo siguiente
 
 PORT = 3050
