@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NewPhone } from '../../symbol/phone.interface';
+import { NewBuyout} from '../../symbol/phone.interface';
 import { ClientPresenter } from './client.presenter';
 
 @Component({
@@ -17,7 +17,10 @@ export class ClientComponent implements OnInit {
   client = this.presenter.client$
 
   form: FormGroup = this.fb.group({
-    name: [null, [Validators.required]],
+    item: [null, [Validators.required]],
+    size: [null, [Validators.required]],
+    price:[null, [Validators.required]],
+    usdValue:[null, [Validators.required]],
   })
 
 
@@ -37,11 +40,14 @@ export class ClientComponent implements OnInit {
 
   add():void{
     if(this.form.valid){
-      let newPhone:NewPhone= {
-        name:this.form.value.name,
-        clientId: this.clientId
+      let newBuy:NewBuyout= {
+        item :this.form.value.item,
+        talle: this.form.value.size,
+        clientId: this.clientId,
+        price: this.form.value.price,
+        usdValue: this.form.value.usdValue
       }
-      this.presenter.createPhone(newPhone);
+      this.presenter.createBuydrop(newBuy);
       window.location.reload()
     }
   }

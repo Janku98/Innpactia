@@ -4,7 +4,7 @@ table{
     padding-right: 1rem;
 }
 .table-header{
-    background-color: rgba(245, 245, 245, 0.212);
+    background-color: #3C9045;
     color: white;
     font-size: 1.5rem;
     font-family: 'poppins';
@@ -12,13 +12,33 @@ table{
 
 .client-row{
     height: 45px;
-    background-color: gray;
+    background-color: #3c904446;
     font-size: 1.2rem;
     font-family: 'poppins';
     text-align: center;
 }
 .client-row:hover{
-    background-color: rgb(177, 177, 177);
-    cursor: pointer;
+    background-color: rgb(153, 153, 153);
     transition: all 400ms;
+}
+
+.td-button{
+    display: flex;
+    justify-content: center;
+}
+.view-shop-button{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 8px 10px 8px;
+    border-radius: 8px;
+    border: none;
+    margin: 5px 0px;
+}
+.view-shop-button:hover{
+    cursor: pointer;
+}
+.chop-icon{
+    width: 25px;
+    margin-right: 5px;
 }

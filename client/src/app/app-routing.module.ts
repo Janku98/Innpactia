@@ -17,6 +17,11 @@ const routes: Routes = [
     canActivateChild: [TokenGuard],
     loadChildren: ()=> import('./features/home/home.module').then(m=>m.HomeModule)
   },
+  {
+    path: 'cashbox',
+    canActivateChild: [TokenGuard],
+    loadChildren: ()=> import('./features/cash-box/cash-box.module').then(m=>m.CashBoxModule)
+  },
   {path: '**', redirectTo: 'login'}
 ]
 

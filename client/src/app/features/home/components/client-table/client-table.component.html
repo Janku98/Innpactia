@@ -1,19 +1,25 @@
 <table>
     <tr class="table-header">
-        <th>Id client</th>
-        <th>Name</th>
-        <th>Phones</th>
+        <th>CLIENT ID</th>
+        <th>NAME</th>
+        <th>BUYOUT</th>
     </tr>
 
-    <tr *ngFor="let client of clients" class="client-row" (click)="inspectClient(client.clientId)">
+    <tr *ngFor="let client of clients" class="client-row">
         <td>
             {{client.clientId}}
         </td>
         <td>
             {{client.name}}
         </td>
-        <td>
-            proximamente
+        <td class="td-button">
+            <button class="view-shop-button" 
+                    (click)="inspectClient(client.clientId)">
+                <img alt="view-data-icon" 
+                     src="../../../../../assets/chop-icon.png" 
+                    class="chop-icon"/>
+                View buyouts
+            </button>
         </td>
     </tr>
 </table>

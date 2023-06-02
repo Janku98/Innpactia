@@ -11,12 +11,28 @@
                     (click)="goback()"/>
             </div>
 
-            <p>Client Name: {{$any(client|async)?.payload.clientName}}</p>
+            <p>Client: {{$any(client|async)?.payload.clientName}}</p>
 
             <div class="form-box" [formGroup]="form">
-                <p>Add cellphone</p>
-                <input placeholder="phone name" 
-                        formControlName="name"/>
+                <p>Add buyout</p>
+                <select name="item" formControlName="item">
+                    <option value="remera">Remera</option>
+                    <option value="campera">Campera</option>
+                    <option value="gorra">Gorra</option>
+                </select>
+
+                <select name="size" formControlName="size">
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+
+                <div class="inputs-prices-container">
+                    <input formControlName="price" placeholder="Price" class="input-prices" type="number"/>
+                    <input formControlName="usdValue" placeholder="Actual USD value" class="input-prices" type="number"/>
+                </div>
+
                 <button [disabled]="form.invalid"
                         (click)="add()">
                     Add
@@ -25,8 +41,44 @@
         </div>
 
         <div class="repairs-container">
-            <div class="cellphone-card" *ngFor="let phone of $any(client|async)?.payload.phones">
-                <p>Cellphone Name: {{phone.cell_name}}</p>
+            <div class="cellphone-card" >
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ITEM</th>
+                            <th>TALLE</th>
+                            <th>PRECIO PESOS</th>
+                            <th>VALOR DEL USD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let buy of $any(client|async)?.payload.buydrop">
+                            <td>
+                                {{buy.item}}
+                            </td>
+                            <td>
+                                {{buy.talle}}
+                            </td>
+                            <td>
+                                {{buy.price}}
+                            </td>
+                            <td>
+                                {{buy.usdValue}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total-container">
+                    <div>
+                        <span>Total Pesos:</span>
+                        <span>{{$any(client|async)?.payload.totalPesos}} $PesosARG</span>
+
+                    </div>
+                    <div>
+                        <span>Total dolares:</span>
+                        <span>{{$any(client|async)?.payload.totalUsd}} U$D</span>
+                    </div>  
+                </div>
             </div>
         </div>
 

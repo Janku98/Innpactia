@@ -1,6 +1,7 @@
 <div class="home-background">
     <div class="title-container">
-        <p>Welcome {{user}}, click in each row to get more info</p>
+        <p>Welcome {{user}}</p>
+        <img alt="baliicon" src="../../../../../assets/login-icon.png" class="login-icon"/> 
     </div>
 
     <div class="buttons-container">
@@ -8,6 +9,11 @@
             <img alt="add-icon" src="../../../../../assets/add-icon.png" 
                  class="button-icon"/> 
             Nuevo Cliente
+        </button>
+        <button (click)="goToCashBox()">
+            <img alt="add-icon" src="../../../../../assets/cash-box-icon.png" 
+                 class="button-icon"/> 
+            Caja
         </button>
         <button (click)="logOut()">
             <img alt="logout-icon" src="../../../../../assets/logout-icon.png" class="button-icon" />

@@ -7,7 +7,7 @@ import { HomeComponent } from './views/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientsHttp } from './services/clients.http';
 import {MatDialogModule} from '@angular/material/dialog';
-import { PhoneHttp } from './services/phone.http';
+import { BuydropHttp } from './services/buydrop.http';
 
 
 
@@ -23,6 +23,6 @@ import { PhoneHttp } from './services/phone.http';
     MatDialogModule,
     
   ],
-  providers: [ClientsHttp, PhoneHttp]
+  providers: [ClientsHttp, BuydropHttp]
 })
 export class HomeModule { }

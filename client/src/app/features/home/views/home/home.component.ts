@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+
 import { TokenService } from 'src/app/core/services/token.service';
 import { HomePresenter } from './home.presenter';
-import { MatDialog } from '@angular/material/dialog';
 import { ModalNewClientComponent } from '../../components/modal-new-client/modal-new-client.component';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -34,6 +36,10 @@ export class HomeComponent implements OnInit {
        disableClose: true
       })
     dialogRef.afterClosed()
+  }
+
+  goToCashBox(): void {
+    this.router.navigate(['/cashbox'])
   }
 
   logOut(): void {

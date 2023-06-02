@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 import { NewClient } from '../../symbol/get-clients.response';
 import { ModalNewClientPresenter } from './modal-new-client.presenter';
 
@@ -18,7 +17,7 @@ export class ModalNewClientComponent {
   })
 
 
-  constructor(private readonly router: Router,
+  constructor(
               private readonly fb: FormBuilder,
               public dialogRef: MatDialogRef<void>,
               private readonly presenter: ModalNewClientPresenter) { }

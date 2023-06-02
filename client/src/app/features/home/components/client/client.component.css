@@ -1,7 +1,7 @@
 .client-background{
     height: 100vh;
     width: 100vw;
-    background-color: rgb(55, 61, 94);
+    background-color: #B5BEC6;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
 .client-card{
     height: 500px;
     width: 70%;
-    background-color: gray;
+    background-color: #373D5E;
     display: flex;
     flex-direction: row;
     border-radius: 12px;
@@ -51,22 +51,71 @@
 .form-box > p{
     font-family: 'poppins';
 }
-.form-box > input {
+.form-box > select {
     margin-bottom: 10px;
+    border-radius: 6px;
+    height: 32px;
+    font-family: 'poppins';
+    background-color:  #FFFFFF;
+}
+.inputs-prices-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.input-prices{
+    height: 32px;
+    width: 48%;
+    font-family: 'poppins';
+    border-radius: 6px;
+    border: none;
+    background-color:  rgba(255, 255, 255, 0.603);
+}
+.input-prices::placeholder{
+    color: black;
 }
 
+.input-prices:focus{
+    border: none;
+    outline: none;
+}
+
+.form-box > button {
+    background-color: #3C9045;
+    color: aliceblue;
+    height: 42px;
+    border-radius: 2px;
+    border: none;
+}
+.form-box > button:disabled {
+    background-color: rgba(153, 240, 157, 0.342);
+    color: aliceblue;
+    border: none;
+}
+
+.form-box > button:hover {
+    cursor: pointer;
+}
 .cellphone-card{
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     border-radius: 10px;
     border: 1px solid black;
     margin-bottom: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(22, 44, 90, 0.377);
+    background-color: #645266;
 }
-
+td{
+    border: 1px solid black;
+}
+table{
+    width: 95%;
+}
 
 .exit-container{
     width: 100%;
@@ -77,4 +126,16 @@
 
 .goback-icon{
     width: 30px;
+}
+.total-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 0px 0px 8px 8px;
+    min-height: 30px;
+}
+.total-container > div{
+    display: flex;
+    justify-content: space-between;
 }

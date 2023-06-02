@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetClientsResponse } from '../../symbol/get-clients.response';
 
@@ -7,7 +7,7 @@ import { GetClientsResponse } from '../../symbol/get-clients.response';
   templateUrl: './client-table.component.html',
   styleUrls: ['./client-table.component.css']
 })
-export class ClientTableComponent implements OnInit {
+export class ClientTableComponent {
 
   clients:GetClientsResponse[]|null|undefined = [];
 
@@ -17,9 +17,7 @@ export class ClientTableComponent implements OnInit {
 
   constructor(private readonly router: Router) { }
 
-  ngOnInit(): void {
-  }
-
+ 
   inspectClient(clientId:number):void {
     this.router.navigate(['/home/client'], {queryParams: {clientId: clientId}});
   }

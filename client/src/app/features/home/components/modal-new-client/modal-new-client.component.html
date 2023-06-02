@@ -8,8 +8,15 @@
     </div>
 
     <div class="buttons-container">
-        <button (click)="create()" [disabled]="form.invalid">Aceptar</button>
-        <button (click)="cancel()">Cancelar</button>
+        <button class="addclient-button-accept" 
+                (click)="create()" 
+                [disabled]="form.invalid">
+                Aceptar
+        </button>
+        <button class="addclient-button-cancel"
+                (click)="cancel()">
+                Cancelar
+        </button>
     </div>
     
 </div>

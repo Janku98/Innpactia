@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
 import { PresenterItemState } from 'src/app/core/symbol/presenter-item.interface';
 import { ClientsHttp } from '../../services/clients.http';
-import { PhoneHttp } from '../../services/phone.http';
+import { BuydropHttp } from '../../services/buydrop.http';
 import { ClientByIdResponse } from '../../symbol/get-clients.response';
-import { NewPhone } from '../../symbol/phone.interface';
+import { NewBuyout } from '../../symbol/phone.interface';
 
 const firstState: PresenterItemState<null> = {state: "loading", payload: null}
 
@@ -17,7 +17,7 @@ export class ClientPresenter{
   destroy$ = new Subject();
 
   constructor(private readonly clientsHttp: ClientsHttp,
-              private readonly phoneHttp: PhoneHttp) { }
+              private readonly phoneHttp: BuydropHttp) { }
 
   getClientById(id:number): void {
     this.clientsHttp.getClientById(id)
@@ -29,8 +29,8 @@ export class ClientPresenter{
   }
 
 
-  createPhone(newPhone:NewPhone): void {
-    this.phoneHttp.addPhone(newPhone)
+  createBuydrop(NewBuyout:NewBuyout): void {
+    this.phoneHttp.addPhone(NewBuyout)
     .pipe(
       takeUntil(this.destroy$)
     ).subscribe((response)=>{

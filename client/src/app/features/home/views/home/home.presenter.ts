@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject, takeUntil } from 'rxjs';
-import { PresenterItemState } from 'src/app/core/symbol/presenter-item.interface';
+
 import { ClientsHttp } from '../../services/clients.http';
 import { GetClientsResponse } from '../../symbol/get-clients.response';
+import { PresenterItemState } from 'src/app/core/symbol/presenter-item.interface';
 
 const firstState: PresenterItemState<null> = {state: "loading", payload: null}
 

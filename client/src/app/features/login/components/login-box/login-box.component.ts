@@ -11,6 +11,9 @@ import { FormLogin } from '../../symbol/login-inteface';
 })
 export class LoginBoxComponent {
 
+  lineColor: string = "blackLine"
+  letterColor: string = "blackLetter"
+
   form: FormGroup = this.fb.group({
     username: [null, [Validators.required]],
     password: [null, [Validators.required]],
